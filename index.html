@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="icon"
+      type="image/svg"
+      href="https://sky-online-images.s3.ap-south-1.amazonaws.com/favicon.svg"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <meta name="description" content="Abhi checkout | Bank checkout" />
+    <title>Abhi Checkout</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="text/javascript" src="./script.js" defer></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="nav-btns">
+      <button class="primary-btn">Pay now</button>
+      <button class="dark-btn">Back to Home</button>
+    </div>
+    <div class="checkout-div">
+      <div class="top-head">Bill Payment -</div>
+      <div class="ebill-nav">
+        <div class="head">Quick EBill</div>
+        <div class="nav-links">
+          <div class="nav-link">HOME</div>
+          <div class="nav-link">Pay Bill</div>
+          <div class="nav-link">REGISTER COMPLAINT</div>
+          <div class="nav-link">COMPLAINT STATUS</div>
+        </div>
+        <div class="settings">
+          <div class="user">Welcome Abhinav</div>
+          <button class="danger-btn">Logout</button>
+        </div>
+        <div class="screen">
+          <span id="screen-span">Payment Screen</span>
+        </div>
+      </div>
+      <div class="container" id="container">
+        <div class="checkout-form">
+          <div class="payment-method">
+            <div class="head">Pay by Credit Card</div>
+            <div class="card-types">
+              <div class="visa">
+                <img
+                  src="https://logos-world.net/wp-content/uploads/2020/06/Visa-Logo-2006.png"
+                  alt="visa"
+                />
+              </div>
+              <div class="mastercard">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/2560px-Mastercard_2019_logo.svg.png"
+                  alt="master-card"
+                />
+              </div>
+            </div>
+          </div>
+          <form id="checkout-form">
+            <div class="input-group">
+              <div class="input-label">Card Number</div>
+              <input required type="text" placeholder="enter card number" />
+            </div>
+
+            <div class="input-flex">
+              <div class="input-group">
+                <div class="input-label">Expiration Date</div>
+                <input
+                  required
+                  type="number"
+                  placeholder="month"
+                  min="1"
+                  max="12"
+                />
+              </div>
+              <div class="input-group">
+                <div class="input-label">&nbsp;</div>
+                <input required type="number" placeholder="year" min="1970" />
+              </div>
+              <div class="input-group">
+                <div class="input-label">CVV/CVC</div>
+                <input required type="number" />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <div class="input-label">Card Holder Name</div>
+              <input type="text" placeholder="enter card holder name" />
+            </div>
+
+            <div class="submit-btn">
+              <button type="submit">Make Payment</button>
+            </div>
+            <div class="cancel-btn">
+              <button type="reset">cancel</button>
+            </div>
+          </form>
+        </div>
+        <div class="amount">
+          <div class="pay-amt">
+            Payment Amount
+            <span> INR 2028.0 </span>
+          </div>
+        </div>
+      </div>
+      <div class="payment-success" id="success-div">
+        <div class="head">Total amout paid: 2028.0</div>
+        <div class="table-head">KSEB ONLINE PAYMENT - TRANSACTION DETAILS</div>
+        <div class="table">
+          <table cellspacing="0">
+            <thead>
+              <tr>
+                <th>Transaction Number</th>
+                <th>Receipt Number</th>
+                <th>Transaction Date</th>
+                <th>Transaction Type</th>
+                <th>Payment Type</th>
+                <th>Payment Gateway</th>
+                <th>Section Name</th>
+                <th>Consumer Number</th>
+                <th>Bill Number</th>
+                <th>Paid Amount</th>
+                <th>Transaction Amount</th>
+                <th>Status</th>
+                <th>Acknowledgement Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>345980345</td>
+                <td>2134567890976</td>
+                <td>2022-02-10 12:05:18.78</td>
+                <td>DC</td>
+                <td>Registered User</td>
+                <td>EFG Payment Gateway</td>
+                <td>ABC</td>
+                <td>1122334455662</td>
+                <td>4545556</td>
+                <td>INR 2,028</td>
+                <td>INR 2,028</td>
+                <td>Payment Done Successfully</td>
+                <td>2022-02-10</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="action-btns">
+          <button class="dark-btn" id="back-to-payment-btn">
+            Back to Home
+          </button>
+          <button class="primary-btn">Download</button>
+        </div>
+        <div class="payment-details" align="center">
+          <div class="table-head">ONLINE PAYMENT - TRANSACTION DETAILS</div>
+          <div class="table">
+            <table cellspacing="0">
+              <tbody>
+                <tr>
+                  <td>Transaction Number</td>
+                  <td>345980345</td>
+                </tr>
+                <tr>
+                  <td>Receipt Number</td>
+                  <td>2134567890976</td>
+                </tr>
+                <tr>
+                  <td>Transaction Date</td>
+                  <td>2022-02-10 12:05:18.78</td>
+                </tr>
+                <tr>
+                  <td>Transaction Type</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>Payment Type</td>
+                  <td>Registered User</td>
+                </tr>
+                <tr>
+                  <td>Payment Gateway</td>
+                  <td>EFG Payment Gateway</td>
+                </tr>
+                <tr>
+                  <td>Section Name</td>
+                  <td>ABC</td>
+                </tr>
+                <tr>
+                  <td>Consumer Number</td>
+                  <td>1122334455662</td>
+                </tr>
+                <tr>
+                  <td>Bill Number</td>
+                  <td>4545556</td>
+                </tr>
+                <tr>
+                  <td>Paid Amount</td>
+                  <td>INR 2,028</td>
+                </tr>
+                <tr>
+                  <td>Transaction Amount</td>
+                  <td>INR 2,028</td>
+                </tr>
+                <tr>
+                  <td>Status</td>
+                  <td>Payment Done Successfully</td>
+                </tr>
+                <tr>
+                  <td>Acknowledgement Date</td>
+                  <td>2022-02-10</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
